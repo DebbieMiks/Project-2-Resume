@@ -21,8 +21,7 @@ h1 {
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
+  font: 24px, bold;
   color: #999999;
   line-height: 29px;
   padding: 10px;
@@ -36,8 +35,7 @@ h3 {
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 14px;
+  font: 14px, bold;
   color: #4A4A4A;
   line-height: 17px;
 }
@@ -50,16 +48,14 @@ h2, h3, h4, h5 {
 
 
 .date-text {
-  font-style: italic;
-  font-size: 14px;
+  font-size: 14px, italic;
   color: #999999;
   line-height: 16px;
   float: left;
 }
 
 .location-text {
-  font-style: italic;
-  font-size: 14px;
+  font-size: 14px, italic;
   color: #999999;
   line-height: 16px;
   float: right;
@@ -86,7 +82,7 @@ a {
   line-height: 28px;
 }
 
-#skillsH3 {
+#skillsHeader {
   color: #F5AE23;
   display: none;
 }
@@ -208,7 +204,7 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
-  #skillsH3,
+  #skillsHeader,
   .biopic {
     display: block;
   }

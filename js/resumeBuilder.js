@@ -3,7 +3,7 @@
 var skills = ["HTML5","CSS3","JavaScript","jQuery"];
 var bio = {
     "name"      : "Debbie Miksiewicz",
-    "role"      : "Web Developer",
+    "role"      : "Web Developer Newbie",
       "contacts"  : {
       "mobile"  : "(123) 456-7890",
       "email"   : "debbiemiks@debbiemiks.com",
@@ -12,26 +12,24 @@ var bio = {
       "blog"    : "http://inletsandoutlets.blogspot.com",
       "location": "New Jersey"
     },
-	"bioPic" : "images/DebbieMiks.jpg",
+	"biopic" : "images/DebbieMiks.jpg",
     "welcomeMsg": "Welcome to my online resume for my Udacity Nanodegree!",
     "skills" : skills
 };
 
 var formattedName = HTMLheaderName.replace("%data%",bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
-
 var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
 var formattedTwitter = HTMLtwitter.replace("%data%",bio.contacts.twitter);
 var formattedGitHub = HTMLgithub.replace("%data%",bio.contacts.github);
 var formattedBlog = HTMLblog.replace("%data%",bio.contacts.blog);
 var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
-var formattedBioPic = HTMLbioPic.replace("images/DebbieMiks.jpg");
+var formattedbiopic = HTMLbiopic.replace("images/DebbieMiks.jpg");
 var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%",bio.welcomeMsg);
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
-
 $("#header").append(formattedMobile);
 $("#header").append(formattedEmail);
 $("#header").append(formattedTwitter);
@@ -50,11 +48,7 @@ if (bio.skills.length > 0) {
   }
 };
 
-
-
-
 //Work
-
 var work = {
   "jobs" : [
     {
@@ -73,7 +67,6 @@ var work = {
     }
   ],
 };
-
 
 function displayWork() {
   for (job in work.jobs) {
@@ -129,54 +122,53 @@ projects.display = function() {
 
 projects.display();
 
-
 //Education
 var education = {
 		"schools": [
 	    {
-	    	"name" 		: "NJIT - New Jersey Institute of Technology",
-	    	"location" 	: "Newark, New Jersey",
-	    	"dates" 	: "2010 - 2013",
-	    	"major" 	: "Masters",
-	    	"degree" 	: "Professional and Technical Communications",
-	    	"url" 		: "http://www.njit.edu/"
+	    	"name"     : "NJIT - New Jersey Institute of Technology",
+	    	"location" : "Newark, New Jersey",
+	    	"dates"    : "2010 - 2013",
+	    	"major"    : "Masters",
+	    	"degree"   : "Professional and Technical Communications",
+	    	"url"      : "http://www.njit.edu/"
 	    },
 	  ]
 ,
-	"onlineCourses" : [
+	"onlineCourses"  : [
 		   {
-			"school"   : "Udacity",
-			"location" : "Online",
-			"title"    : "Front End Web Developer Nanodegree",
-			"dates"    : "2015",
-			"url"	   : "https://www.udacity.com"
-		   },	   
+			"school"     : "Udacity",
+			"location"   : "Online",
+			"title"      : "Front End Web Developer Nanodegree",
+			"dates"      : "2015",
+			"url"        : "https://www.udacity.com"
+		   },
 		]
 	};
 function displayEducation() {
 	for (school in education.schools) {
-		$("#education").append(HTMLschoolStart);		
+		$("#education").append(HTMLschoolStart);
 		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
-		$(".education-entry:last").append(formattedName);		 
+		$(".education-entry:last").append(formattedName);
 		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-		$(".education-entry:last").append(formattedLocation);	 
+		$(".education-entry:last").append(formattedLocation);
 		var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-		$(".education-entry:last").append(formattedSchoolDates);		 
+		$(".education-entry:last").append(formattedSchoolDates);
 		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-		$(".education-entry:last").append(formattedMajor);		 
+		$(".education-entry:last").append(formattedMajor);
 		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-		$(".education-entry:last").append(formattedDegree);		 
+		$(".education-entry:last").append(formattedDegree);
 		var formattedURL = HTMLonlineURL.replace("%data%", education.schools[school].url);
 		$(".education-entry:last").append(formattedURL);
-	}	
-	
+	}
+
 	$("#education").append(HTMLonlineClasses);
 	for (school in education.onlineCourses) {
-		$("#education").append(HTMLschoolStart); 
+		$("#education").append(HTMLschoolStart);
 		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[school].school);
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[school].title);
 		var formattedSchoolTitle = formattedOnlineTitle + formattedOnlineSchool;
-		$(".education-entry:last").append(formattedSchoolTitle);	
+		$(".education-entry:last").append(formattedSchoolTitle);
 		var formattedOnlineDate = HTMLonlineDates.replace("%data%", education.onlineCourses[school].dates);
 		$(".education-entry:last").append(formattedOnlineDate);
 		var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[school].url);
@@ -184,11 +176,7 @@ function displayEducation() {
 	}
 };
 displayEducation();
-
 //misc
-
-
 $("#main").append(internationalizeButton);
-
 $('#mapDiv').append(googleMap);
 

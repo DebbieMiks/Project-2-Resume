@@ -96,7 +96,7 @@ a {
   line-height: 28px;
 }
 
-#skillsH3 {
+#skillsHeader {
   color: #F5AE23;
   display: none;
 }
@@ -124,13 +124,11 @@ a {
   background-color: #4A4A4A;
 }
 
-/* TODO: Replace with image later */
 #header {
   background-color: #484848;
 }
 
 .flex-box {
-  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -139,16 +137,13 @@ a {
 }
 
 .center-content {
-  padding-top: 2.5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 2.5%
+  padding-top: 2.5%,5%,5%,2.5%
 }
 
 ul {
   list-style-type: none;
 }
-
+/*TO DO Put the image here */
 .biopic {
   float: left;
   padding: 10px;
@@ -160,7 +155,6 @@ img {
   padding: 10px;
 }
 
-/* Bar chart stuff */
 .chart div {
   font: 10px sans-serif;
   background-color: #4A4A4A;
@@ -218,7 +212,7 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
-  #skillsH3,
+  #skillsHeader,
   .biopic {
     display: block;
   }
