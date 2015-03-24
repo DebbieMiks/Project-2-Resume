@@ -57,8 +57,7 @@ h2, h3, h4, h5 {
   padding-left: 5%;
   padding-right: 5%;
 }
-
-
+  
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -143,7 +142,7 @@ a {
 ul {
   list-style-type: none;
 }
-/*TO DO Put the image here */
+
 .biopic {
   float: left;
   padding: 10px;
@@ -217,3 +216,4 @@ span {
     display: block;
   }
 }
+<!--Debbie Miksiewicz--->

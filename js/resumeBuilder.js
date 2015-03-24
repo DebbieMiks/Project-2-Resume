@@ -1,6 +1,7 @@
 //BIO
 
 var skills = ["HTML5","CSS3","JavaScript","jQuery"];
+//bio
 var bio = {
     "name"      : "Debbie Miksiewicz",
     "role"      : "Web Developer Newbie",
@@ -12,10 +13,11 @@ var bio = {
       "blog"    : "http://inletsandoutlets.blogspot.com",
       "location": "New Jersey"
     },
-	"biopic" : "images/DebbieMiks.jpg",
-    "welcomeMsg": "Welcome to my online resume for my Udacity Nanodegree!",
-    "skills" : skills
-};
+	  "welcomeMsg": "Welcome to my online resume for my Udacity Nanodegree!",
+    "skills" : ["HTML5", "CSS3", "JavaScript", "jQuery" , "coding"
+  ],
+    "biopic" : "images/DebbieMiks.jpg"
+}
 
 var formattedName = HTMLheaderName.replace("%data%",bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
@@ -97,14 +99,14 @@ var projects = {
      "description" : "A web based interview tool that ramdomly generates interview questions.",
      "images" :  ""
     },
-	{
+	 {
      "title" : "Matrex Evolution Tracking Tool",
      "dates" : "2014",
      "description" : "A web based portal to track employee training and progress.",
      "images" :  ""
     }
-  ],
-};
+  ]
+}
 
 projects.display = function() {
   for (project in projects.projects) {
@@ -132,19 +134,18 @@ var education = {
 	    	"major"    : "Masters",
 	    	"degree"   : "Professional and Technical Communications",
 	    	"url"      : "http://www.njit.edu/"
-	    },
-	  ]
-,
+	    }
+	  ],
 	"onlineCourses"  : [
-		   {
+		  {
 			"school"     : "Udacity",
 			"location"   : "Online",
 			"title"      : "Front End Web Developer Nanodegree",
 			"dates"      : "2015",
 			"url"        : "https://www.udacity.com"
-		   },
+		   }
 		]
-	};
+	}
 function displayEducation() {
 	for (school in education.schools) {
 		$("#education").append(HTMLschoolStart);
@@ -177,6 +178,6 @@ function displayEducation() {
 };
 displayEducation();
 //misc
-$("#main").append(internationalizeButton);
+//$("#main").append(internationalizeButton);
 $('#mapDiv').append(googleMap);
 
